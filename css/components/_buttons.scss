@@ -1,0 +1,73 @@
+.primary-button {
+  display: flex;
+  padding: 12px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 4px;
+  background: #1485db;
+
+  max-width: 358px;
+  width: 100%;
+
+  transition: all 0.25s ease-in;
+
+  cursor: pointer;
+
+  color: #fff;
+
+  border: 1px solid transparent;
+  &:hover {
+    background: #fff;
+    color: #1485db;
+    border: 1px solid #1485db;
+    transition: all 0.25s ease-in;
+  }
+}
+
+.secondary-button {
+  display: flex;
+  padding: 12px 12px;
+
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  max-width: 358px;
+  width: 100%;
+
+  border-radius: 4px;
+  border: 1px solid #1485db;
+  background: #fff;
+
+  color: #1485db;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease-in;
+  &:hover {
+    color: #fff;
+    background: #1485db;
+    transition: all 0.25s ease-in;
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.nav-btn-padding {
+  padding: 6px 12px;
+  max-width: unset;
+  width: unset;
+  &:hover {
+    svg {
+      path {
+        fill: #1485db;
+        transition: all 0.25s ease-in;
+      }
+    }
+  }
+}

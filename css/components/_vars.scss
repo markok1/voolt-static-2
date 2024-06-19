@@ -1,0 +1,47 @@
+$intertight: "InterTight", sans-serif;
+
+:root {
+  // Colors
+  --color-accent: #1485db;
+  --color-primary: #005299;
+  --color-secodnary: #50abf9;
+  --neutral-white: #fff;
+  --neutral-black: #111;
+  --neutral-grey-dark: #111111a3;
+  --neutral-grey-light: #11111112;
+
+  --light-blue: #edf7fe;
+
+  --color-background: #f0f3ff;
+
+  // var padding
+  --padding-4: 4px;
+  --padding-8: 8px;
+  --padding-12: 12px;
+  --padding-16: 16px;
+  --padding-20: 20px;
+  --padding-24: 24px;
+  --padding-32: 32px;
+  --padding-36: 36px;
+  --padding-40: 40px;
+  --padding-48: 48px;
+  --padding-56: 56px;
+  --padding-60: 60px;
+  --padding-80: 80px;
+
+  // var radius
+  --border-4: 4px;
+  --border-8: 8px;
+  // var radius end
+
+  // var spacing
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  // var spacing end
+}

@@ -1,0 +1,48 @@
+.bottom-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  .bottom-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  .small-text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    > div {
+      display: flex;
+      gap: var(--spacing-4, 4px);
+    }
+    .text-small {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .bottom-boxes .small-text-box .text-small {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bottom-boxes .bottom-buttons {
+    flex-direction: row;
+    width: 100%;
+    a {
+      max-width: unset;
+      width: unset;
+      padding: 8px 12px;
+    }
+  }
+}

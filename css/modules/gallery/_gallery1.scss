@@ -1,0 +1,239 @@
+.gallery1 {
+  padding: var(--padding-40, 40px) 0px;
+  border-top: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+  overflow: hidden;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1440px;
+    margin: auto;
+  }
+  .gallery-top {
+    display: flex;
+    padding: var(--padding-20, 20px) var(--padding-16, 16px) 0px var(--padding-16, 16px);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-16, 16px);
+    p {
+      text-align: center;
+    }
+  }
+  .sliders-holder {
+    position: relative;
+    padding: 0px 16px;
+    .slick-prev {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: unset;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.9);
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: 36px;
+      height: 36px;
+    }
+    .slick-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: unset;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.9);
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: 36px;
+      height: 36px;
+    }
+  }
+  .single-slider {
+    margin-bottom: 12px;
+    .big-image {
+      height: 280px !important;
+      margin: 0px 10px;
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .bottom-slider {
+    margin: 0 -6px;
+    .small-image {
+      height: 80px;
+      margin: 0 6px;
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+    }
+  }
+  .bottom-boxes {
+    padding: 0px 16px;
+  }
+}
+.glider-next {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-pallette-neutralGreyLight, rgba(17, 17, 17, 0.07));
+}
+.glider-prev {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-pallette-neutralGreyLight, rgba(17, 17, 17, 0.07));
+}
+
+@media screen and (min-width: 768px) {
+  .gallery1 {
+    .single-slider .big-image {
+      height: 280px !important;
+      // nth child is used to fix image position because with object-position:center (default) dog wasn't in the focus / use it to position the content properly
+      // you can remove it or use it to adjust future images, start's here:
+      &:nth-child(3) {
+        img {
+          object-position: top;
+        }
+      }
+      &:nth-child(8) {
+        img {
+          object-position: top;
+        }
+      }
+      // ends here
+    }
+    .bottom-slider .small-image {
+      height: 120px;
+      // this is the same thing but for the bottom slider / smaller images
+      &:nth-child(12) {
+        img {
+          object-position: top;
+        }
+      }
+    }
+    h2 {
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 48px; /* 120% */
+    }
+    .sub-text {
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 30px;
+    }
+    .primary-button {
+      max-width: 230px;
+    }
+    .glider-next {
+      width: 48px;
+      height: 48px;
+      right: 0px;
+      border: 1px solid var(--color-pallette-neutralGreyLight, rgba(17, 17, 17, 0.07));
+    }
+    .glider-prev {
+      width: 48px;
+      height: 48px;
+      left: 0px;
+      border: 1px solid var(--color-pallette-neutralGreyLight, rgba(17, 17, 17, 0.07));
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .gallery1 {
+    padding: var(--padding-80, 80px) 0px;
+    .wrapper {
+      gap: 40px;
+    }
+    .single-slider {
+      // display: none;
+    }
+
+    .bottom-slider {
+      margin-bottom: 20px;
+      .small-image {
+        height: 250px;
+      }
+    }
+    .sliders-holder {
+      .slick-prev,
+      .slick-next {
+        border: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+        background: var(--neutral-white, #fff);
+      }
+    }
+    .gallery-top {
+      padding: 0px;
+      gap: 30px;
+      max-width: 780px;
+      margin: auto;
+    }
+
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery1 {
+    .bottom-slider {
+      padding: 0px 55px;
+    }
+    .sliders-holder .slick-prev {
+      left: 0px;
+      width: 48px;
+      height: 48px;
+    }
+    .sliders-holder .slick-next {
+      right: 0px;
+      width: 48px;
+      height: 48px;
+    }
+    .bottom-slider {
+      max-width: 1300px;
+      margin: 0 auto 20px auto;
+    }
+    .bottom-slider .small-image {
+      height: 280px;
+      margin: 0 8px;
+    }
+  }
+}
+@media screen and (min-width: 1350px) {
+  .gallery1 {
+    .sliders-holder .slick-prev {
+      left: -24px;
+    }
+    .sliders-holder .slick-next {
+      right: -24px;
+    }
+  }
+}

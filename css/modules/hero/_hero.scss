@@ -1,0 +1,198 @@
+.hero {
+  .hero-main {
+    padding: 32px 16px;
+    position: relative;
+  }
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    inset: 0;
+    z-index: -1;
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(17, 17, 17, 0.96) 25.55%, rgba(17, 17, 17, 0.48) 99.87%), 50% / cover no-repeat;
+    }
+  }
+}
+.hero-content {
+  position: relative;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: fit-content;
+  margin: auto;
+  .benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    p {
+      color: var(--color-neutral-white, #fff);
+    }
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  h1 {
+    color: #fff;
+    text-align: center;
+    span {
+      color: #1485db;
+      background: #fff;
+    }
+  }
+  p {
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.discount-box {
+  max-width: 200px;
+  width: 100%;
+  height: 60px;
+  margin: auto;
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+.dicount-bg {
+  position: absolute;
+  inset: 0px;
+  z-index: -1;
+}
+.discount-content {
+  text-align: center;
+  color: #fff;
+  svg {
+    position: absolute;
+  }
+}
+.svg-top {
+  top: 6px;
+  left: 7px;
+}
+.svg-bot {
+  bottom: 6px;
+  left: 7px;
+}
+
+.hero-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hero-stars-and-reviews {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  p {
+    color: var(--color-neutral-white, #fff);
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+}
+// devider is a vertical text devider
+.devider {
+  width: 1px;
+  height: 16px;
+  opacity: 0.2;
+  background: var(--color-neutral-white, #fff);
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    position: relative;
+    .wrapper {
+      display: flex;
+      align-items: center;
+
+      padding: 50px 16px;
+      justify-content: center;
+    }
+
+    .hero-main {
+      position: unset;
+    }
+    .hero-main {
+      padding: unset;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .hero .wrapper {
+    justify-content: space-between;
+  }
+  .hero-title {
+    h1 {
+      text-align: left;
+      margin-bottom: 16px;
+      max-width: 480px;
+    }
+    p {
+      font-weight: 500;
+      line-height: 24px;
+      text-align: left;
+    }
+  }
+  .benefits-list {
+    margin: unset;
+    gap: 16px;
+  }
+  .hero-bottom {
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .discount-box {
+    margin: unset;
+    margin-top: 32px;
+  }
+  .hero-content {
+    .bottom-boxes{
+      align-items: flex-start;
+      .bottom-buttons{
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero .wrapper {
+    padding: 100px 16px;
+  }
+}

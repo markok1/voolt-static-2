@@ -1,0 +1,19 @@
+.sticky-bottom {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  z-index: 10;
+  padding: 12px 16px;
+  border-top: 1px solid var(--color-pallete-main-pallete-neutralExtraLight, #d9dbdd);
+  background: #1485db;
+  a {
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .sticky-bottom {
+    display: none;
+  }
+}

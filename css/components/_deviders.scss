@@ -1,0 +1,24 @@
+//stroke is a horisontal devider
+.stroke {
+  // padding: 0px 9px;
+  max-width: calc(100vw - 18px);
+  width: 100%;
+  margin: auto;
+  height: 1px;
+  background: var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+}
+// devider is a vertical text devider
+.devider {
+  width: 1px;
+  height: 16px;
+  opacity: 0.2;
+  background: var(--neutral-grey-dark, rgba(17, 17, 17, 0.64));
+}
+// split is the white polygon(triangle) svg
+.split {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}

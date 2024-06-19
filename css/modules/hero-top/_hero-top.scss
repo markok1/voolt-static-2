@@ -1,0 +1,92 @@
+.hero-top {
+  background: #1485db;
+  padding: 4px 0px;
+  p:first-child {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+  }
+
+  .tag-list li {
+    background: transparent;
+    transition: 300ms;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .scroller {
+    max-width: 600px;
+    padding: 0px 5px;
+  }
+
+  .scroller__inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 2px;
+  }
+
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+  }
+
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+    animation-delay: 1s;
+  }
+
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+
+  .scroller[data-direction="slow"] {
+    --_animation-duration: 20s;
+  }
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 10s;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+  .scroller[data-animated="true"] .scroller__inner:has(img:hover, img:active, img:focus) {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+  .scroller[data-animated="true"] .scroller__inner:has(li:hover, li:active, li:focus) {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+  li:hover,
+  li:focus,
+  li:active {
+    transform: scale(1.1);
+    filter: saturate(3);
+  }
+}
+
+@media (min-width: 600px) {
+  .hero-top {
+    display: none;
+  }
+}

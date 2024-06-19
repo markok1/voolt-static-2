@@ -1,0 +1,120 @@
+.faq1 {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--padding-80, 80px) var(--padding-16, 16px);
+    gap: var(--spacing-32, 32px);
+    max-width: 1440px;
+    margin: auto;
+  }
+  .faq-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-16, 16px);
+  }
+  .questions {
+    display: flex;
+    padding: var(--padding-16, 16px);
+    flex-direction: column;
+    gap: var(--spacing-12, 12px);
+
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    border-radius: var(--s, 4px);
+    background: var(--color-background, #f0f3ff);
+
+    .qa-item {
+      border-radius: 4px;
+      background: var(--color-neutral-white, #fff);
+      transition: background-color 0.25s;
+      cursor: pointer;
+
+      display: flex;
+      padding: var(--padding-16, 16px) var(--padding-12, 12px) var(--padding-16, 16px) var(--padding-16, 16px);
+      flex-direction: column;
+
+      &.opened {
+        .rotateSvg {
+          transform: rotate(180deg);
+          transition: all 0.25s ease;
+        }
+        .question::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      .question {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        position: relative;
+        p {
+          color: #1f2328;
+          font-weight: 600;
+        }
+        svg {
+          transition: all 0.25s ease;
+        }
+      }
+
+      .answer {
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.25s ease-in;
+        p {
+          padding-top: 12px;
+        }
+      }
+    }
+  }
+
+  .bottom-boxes {
+    padding: 0px 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .faq1 {
+    .wrapper {
+      gap: 40px;
+    }
+    .faq-top {
+      gap: 20px;
+      max-width: 780px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    .sub-text {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .faq1 {
+    .questions {
+      max-width: 100%;
+      flex-direction: unset;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      .qa-item {
+        width: calc(50% - 10px);
+        height: fit-content;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1300px) {
+  .faq1 {
+    .wrapper {
+      padding: var(--80px, 80px) 130px;
+    }
+  }
+}

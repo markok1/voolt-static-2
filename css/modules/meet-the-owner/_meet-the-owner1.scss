@@ -1,0 +1,156 @@
+.meet-the-owner {
+  background: #383838;
+  position: relative;
+  overflow: hidden;
+  .wrapper {
+    padding: 48px 16px 60px 16px;
+    max-width: 1440px;
+    margin: auto;
+  }
+  .owner-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-32, 32px);
+  }
+  .image {
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
+    height: 300px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  h2 {
+    color: var(--color-neutral-white, #fff);
+  }
+  .owner-text {
+    p {
+      color: var(--color-neutral-white, #fff);
+      text-align: center;
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  //if there is bottom boxes
+
+  .bottom-boxes {
+    padding: 0px 16px;
+    .small-text-box {
+      > div {
+        p {
+          color: var(--color-neutral-white-White, #fff);
+        }
+      }
+    }
+  }
+  // if there is primary button
+
+  .split {
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 50px solid #fff;
+  }
+  .secondary-button {
+    background: transparent;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .meet-the-owner {
+    display: flex;
+    flex-direction: column;
+
+    .wrapper {
+      padding: 80px 10px;
+    }
+    .owner-content {
+      position: relative;
+      justify-content: center;
+      gap: 40px;
+      min-height: 320px;
+    }
+    h2 {
+      width: calc(50% - 40px);
+      padding-top: unset;
+      text-align: left;
+      font-size: 40px;
+      line-height: 48px;
+    }
+    .image {
+      position: absolute;
+      left: calc(50% + 40px);
+      right: 0px;
+      max-width: 550px;
+      height: 320px;
+      width: auto;
+      margin: unset;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .owner-text {
+      width: calc(50% - 40px);
+      p {
+        text-align: left;
+      }
+    }
+    // remove if you don't want the button and the boxes
+    .bottom-boxes {
+      width: calc(50% - 40px);
+      align-items: flex-start;
+      padding: 0px;
+      .bottom-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        a {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+      .primary-button {
+        margin: unset;
+        max-width: 382px;
+      }
+      .small-text-box {
+        min-width: 382px;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .meet-the-owner {
+    .wrapper {
+      padding: 80px 30px 80px 30px;
+    }
+    .split {
+      border-top: 80px solid #fff;
+    }
+  }
+  .meet-the-owner .bottom-boxes .bottom-buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+    a {
+      width: unset;
+      max-width: unset;
+    }
+  }
+}
+@media screen and (min-width: 1300px) {
+  .meet-the-owner {
+    .wrapper {
+      padding: 80px 130px 80px 130px;
+    }
+  }
+}

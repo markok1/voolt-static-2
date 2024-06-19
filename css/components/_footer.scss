@@ -1,0 +1,107 @@
+.footer {
+  //add additional height to this padding if the sticky bar is added, if the height of the sticky is 60 than set padding 100
+  padding-bottom: 40px;
+  background: #f0f3ff;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px 16px 0px 16px;
+    gap: var(--spacing-16, 16px);
+    max-width: 1212px;
+    margin: auto;
+  }
+  .location-and-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    a,
+    .adress {
+      display: flex;
+      gap: var(--spacing-8, 8px);
+
+      color: #1f2328;
+
+      svg {
+        flex-shrink: 0;
+      }
+    }
+  }
+  .privacy-terms {
+    display: flex;
+    padding-top: var(--spacing-12, 12px);
+    flex-direction: column;
+    gap: var(--spacing-16, 16px);
+    .privacy-top {
+      display: flex;
+      gap: var(--spacing-16, 16px);
+      .base-m--regular {
+        color: #1f2328;
+      }
+    }
+    .base-m--regular {
+      color: var(--color-neutral-grey-dark, rgba(17, 17, 17, 0.64));
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .footer-desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 4px;
+    margin-bottom: 12px;
+  }
+  //stroke is a horisontal devider
+  .stroke {
+    max-width: calc(100vw - 18px);
+    width: 100%;
+    margin: auto;
+    height: 1px;
+    background: var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-bottom: 0px;
+    .wrapper {
+      padding: unset;
+      padding: 37px 16px;
+      gap: 20px;
+    }
+    .footer-desktop {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 8px;
+    }
+    .footer-logo {
+      max-width: 96px;
+    }
+    .location-and-phone {
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .footer-desktop {
+      padding-top: 0px;
+      > p {
+        max-width: 484px;
+      }
+    }
+    .privacy-terms {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding-top: 8px;
+      > .base-m--regular {
+        span {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

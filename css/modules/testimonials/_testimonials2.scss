@@ -1,0 +1,124 @@
+.testimonials2 {
+  background: var(--color-secondary, #b3d184);
+  // split is the white polygon(triangle) svg
+  overflow: hidden;
+  .split {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .wrapper {
+    display: flex;
+    padding-bottom: 60px;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1440px;
+    margin: auto;
+    h2 {
+      padding-top: 52px;
+    }
+  }
+  .stars {
+    display: flex;
+    gap: 2px;
+  }
+  .testimonial-holder {
+    // margin: 0px -4px;
+    //padding: 0px 16px;
+    max-width: 100%;
+  }
+  .testimonial {
+    margin: 0px 10px;
+    display: flex;
+    padding: var(--padding-20, 20px) var(--padding-16, 16px);
+    flex-direction: column;
+    gap: var(--spacing-12, 12px);
+
+    border-radius: var(--border-4, 4px);
+    border: 1px solid var(--color-neutral-grey-light, rgba(17, 17, 17, 0.07));
+    background: var(--color-neutral-white, #fff);
+  }
+  .testimonial-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    .image {
+      max-width: 48px;
+      max-height: 48px;
+      img {
+        border-radius: 48px;
+      }
+    }
+    div {
+      .text:first-child {
+        font-weight: 600;
+      }
+      .text:last-child {
+        color: var(--color-neutral-grey-dark, rgba(17, 17, 17, 0.64));
+      }
+    }
+    .google-icon {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+  }
+  .bottom-boxes {
+    padding: 0px 16px;
+  }
+}
+.glider-dot.active {
+  background: #1485db;
+}
+// light gray bg and it changes slick circle color
+.testimonials2--lightbg {
+  background: var(--color-background, #f0f3ff);
+  .testimonial-holder {
+    .slick-dots {
+      .slick-active button {
+        background-color: var(--color-primary, #1a4b8a);
+        transition: all 0.25s ease-in;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials2 {
+    h2 {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    .wrapper {
+      gap: 60px;
+    }
+    .primary-button {
+      max-width: 260px;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .testimonials2 {
+    .wrapper h2 {
+      padding-top: 80px;
+    }
+    // .testimonial-holder {
+    //   margin: 0px -10px;
+    // }
+    // .testimonial {
+    //   margin: 0px 10px;
+    //   opacity: 0.5;
+    // }
+
+    // .slick-active {
+    //   opacity: 0.8;
+    // }
+    // .slick-center {
+    //   opacity: 1;
+    // }
+  }
+}
