@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(formSelector + " .custom-textarea textarea").value = allInformation;
             showNextForm();
             resetForm(formSelector);
-            // submitLead(formData, "form");
+            submitLead(formData, "form");
           }
         }
       });
