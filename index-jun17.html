@@ -2,7 +2,17 @@
 <html lang="en">
   <head>
     <!-- Google Tag Manager -->
-    <script defer>
+    <script src="https://unpkg.com/@builder.io/partytown@latest/dist/partytown.js" async></script>
+
+    <!-- Initialize Partytown -->
+    <script>
+      partytown = {
+        lib: "https://unpkg.com/@builder.io/partytown@latest/dist/",
+      };
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script type="text/javascript">
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -10,7 +20,7 @@
           j = d.createElement(s),
           dl = l != "dataLayer" ? "&l=" + l : "";
         j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        j.setAttribute("data-pt-src", "https://www.googletagmanager.com/gtm.js?id=" + i + dl);
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-WPVZGRX3");
     </script>
@@ -25,10 +35,9 @@
     <link rel="preload" href="img/hero-bg.webp" as="image" media="(min-width: 768px)" />
     <link rel="preload" href="img/hero-bg-mobile.webp" as="image" media="(max-width: 768px)" />
 
-
     <!--  slider start -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"></noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" /></noscript>
     <!--  slider end -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
